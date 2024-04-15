@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Justin Ferreira</title>
+  <link rel="stylesheet" href="/Website Main/styles/styles.css">
+  <link rel="stylesheet" href="/Website Main/styles/contact.css">
+</head>
+<body style="overflow: hidden;">
+    <div class="top-bar">
+        <div class="circle"><a href="/Website Main/index.html"><img src="/Website Main/pictures/Logo.png" alt=""></a></div>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='projects.html'">Projects</button>
+            <button onclick="window.location.href='experience.html'">Experience</button>
+            <button onclick="window.location.href='about.html'">About Me</button>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <div class="container">
+            <h1>Contact Me<span class="heart-icon">♥</span></h1>
+            <!-- Formspree integration -->
+            <form action="https://formspree.io/f/xjvqdadl" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Your Message" style="resize: none;"></textarea>
+
+                <button type="submit">Send Message</button>
+
+                <!-- Hexagon buttons -->
+                <div class="hexagons">
+                    <div class="hexagon"><a href="https://www.instagram.com/direct/t/17842321880498070/"><img src="/Website Main/pictures/instagram.png" alt=""></a></div>
+                    <div class="hexagon"><a href="https://www.linkedin.com/in/justin-ferreira-061149277/"><img src="/Website Main/pictures/linkedin.png" alt=""></a></div>
+                    <div class="hexagon"><a href="contact.html"><img src="/Website Main/pictures/mail.png" alt=""></a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

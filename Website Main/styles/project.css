@@ -1,0 +1,243 @@
+/* Resetting margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for projects section */
+.project-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Styling for project blocks */
+.project-block {
+    display: flex;
+    width: 30%; /* Adjust the width of each project block */
+    height: 150px;
+    margin: 10px;
+    text-decoration: none; /* Remove underlines from links */
+    transition: transform 0.3s ease-in-out; /* Add transition on hover */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.project-block:hover {
+    transform: scale(1.04); /* Make the block slightly bigger on hover */
+}
+
+.project-block .project-image
+.project-block .project-description {
+    width: 50%; /* Set width for each half */
+}
+
+.project-block .project-image {
+    background-color: #62929E; /* Lime green background for left side */
+    border-radius: 10px 0 0 10px; /* Rounded left edges */
+}
+
+.project-block .project-description {
+    background-color: #62929E; /* White background for right side */
+    color: black; /* Black text color */
+    border-radius: 0 10px 10px 0; /* Rounded right edges */
+    padding: 10px; /* Add some padding */
+    opacity: 0; /* Initially hide the project blocks */
+    animation: fadeInAnimation 0.5s forwards; /* Apply the animation */
+}
+
+/* Ensure the halves are flush against each other */
+.project-block .project-description {
+    margin-left: -1px; /* Move the right half slightly to the left to overlap */
+}
+
+/* Add animation delays to each project block */
+.project-block:nth-child(1) .project-description {
+    animation-delay: 0.2s; 
+}
+
+.project-block:nth-child(2) .project-description {
+    animation-delay: 0.4s; 
+}
+
+.project-block:nth-child(3) .project-description {
+    animation-delay: 0.6s; 
+}
+
+.project-block:nth-child(4) .project-description {
+    animation-delay: 0.8s; 
+}
+
+.project-block:nth-child(5) .project-description {
+    animation-delay: 1s; 
+}
+
+.project-block:nth-child(6) .project-description {
+    animation-delay: 1.2s; 
+}
+
+.project-block:nth-child(7) .project-description {
+    animation-delay: 1.4s; 
+}
+
+.project-block:nth-child(8) .project-description {
+    animation-delay: 1.6s; 
+}
+
+.project-block:nth-child(9) .project-description {
+    animation-delay: 1.8s; 
+}
+
+.project-block:nth-child(10) .project-description {
+    animation-delay: 2s; 
+}
+
+.project-block:nth-child(11) .project-description {
+    animation-delay: 2.2s; 
+}
+
+.project-block:nth-child(12) .project-description {
+    animation-delay: 2.4s; 
+}
+
+/* Add more nth-child rules for additional blocks */
+
+/* Add keyframes for fade-in animation */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0; /* Start with 0 opacity */
+        transform: translateX(-20px); /* Start off-screen from the left */
+    }
+    to {
+        opacity: 1; /* Reach full opacity */
+        transform: translateX(0); /* Reset to the normal position */
+    }
+}
+
+/* Styling for search bar and filter *//* Styling for search bar and filter */
+.search-filter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 70%; /* Spanning the page width */
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Styling for search bar and filter */
+.filter-dropdown {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #62929E; /* Lime border */
+    background-color: gray; /* Grey background */
+    cursor: pointer;
+}
+
+/* Styling for filter options */
+.filter-dropdown > option {
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for filter options */
+.filter-dropdown:hover > option:hover {
+    background-color: #62929E; /* Hover color lime */
+    color: white; /* Text color white */
+}
+
+input,
+textarea {
+    padding: 12px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: gray;
+    color: black;
+    border: 2px solid #62929E;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #2c545e; 
+}
+
+.project-block {
+    display: flex;
+    width: 30%; /* Adjust the width of each project block */
+    height: 150px;
+    margin: 10px;
+    text-decoration: none; /* Remove underlines from links */
+    transition: transform 0.3s ease-in-out; /* Add transition on hover */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    position: relative; /* Establish a positioning context for children */
+  }
+  
+  .project-block .project-image {
+    background-color: #62929E; /* Lime green background for left side */
+    border-radius: 10px 0 0 10px; /* Rounded left edges */
+    width: 50%; /* Half the width of the project block */
+  }
+  
+  .project-block .project-description {
+    background-color: #62929E; /* White background for right side */
+    color: black; /* Black text color */
+    border-radius: 0 10px 10px 0; /* Rounded right edges */
+    padding: 10px; /* Add some padding */
+    opacity: 0; /* Initially hide the project blocks */
+    animation: fadeInAnimation 0.5s forwards; /* Apply the animation */
+    width: 50%; /* Half the width of the project block */
+  }
+  
+  .project-block .content-to-change {
+    width: 100%; /* Occupy full width within the image/video container */
+    height: 100%; /* Occupy full height within the image/video container */
+    display: flex; /* Arrange contents in a row */
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  .project-block .content-to-change video,
+  .project-block .content-to-change img {
+    max-width: 100%; /* Ensure the image or video doesn't exceed the container */
+    max-height: 100%; /* Ensure the image or video doesn't exceed the container */
+    height: auto; /* Maintain aspect ratio */
+    display: none; /* Initially hide the video */
+    margin: auto; /* Center the image or video inside the container */
+    border-radius: 10px; /* Apply border-radius to match the container */
+  }
+  
+  .project-block:hover .content-to-change video,
+  .project-block:hover .content-to-change img {
+    display: block; /* Display the video on hover */
+  }
+  
+  .project-block .content-to-change img {
+    /* Your existing styles for image */
+    display: block; /* Show the image by default */
+  }
+  
+  .project-block .content-to-change video {
+    /* Your existing styles for video */
+    display: none; /* Hide the video by default */
+  }
+  
+  .project-block:hover .content-to-change img {
+    /* Hide the image on hover if there's a video */
+    display: none;
+  }
+  
+  .project-block:hover .content-to-change video {
+    /* Show the video on hover if it exists */
+    display: none; /* Hide the video by default */
+  }
+  
+  .project-block:hover:not(:has(.content-to-change video)) .content-to-change img {
+    /* Show the image on hover when there's no video */
+    display: block;
+  }

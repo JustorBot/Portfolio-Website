@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'YourFontName';
+  src: url('/Website Main/FONTS/Lavanderia\ Regular.otf');
+}
+
+@font-face {
+  font-family: 'basker';
+  src: url('/Website Main/FONTS/LibreBaskerville-Regular.ttf');
+}
+
+
+@font-face {
+  font-family: 'robo';
+  src: url('/Website Main/FONTS/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: 'gary';
+  src: url('/Website Main/FONTS/GaramondLibre-Regular.otf');
+}
+
+
+  .top-bar {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between;
+    padding: 2px;
+  }
+  
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire circle */
+  }
+  
+.nav-buttons {
+    display: flex;
+    gap: 50px; /* Adjust the gap between buttons */
+  }
+
+  body {
+    background-color: #393D3F;
+    color: #FDFDFF;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .left-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideFromLeft 1s ease forwards; /* Apply animation for left box */
+    opacity: 0; /* Initially hide the left box */
+  }
+  
+  .right-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideFromRight 1s ease forwards; /* Apply animation for right box */
+    opacity: 0; /* Initially hide the right box */
+  }
+  
+  /* Keyframes for left box animation */
+  @keyframes slideFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Keyframes for right box animation */
+  @keyframes slideFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Specific Styles */
+  h1 {
+    font-size: 50px;
+    font-family: 'robo';
+  }
+  
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'basker';
+  }
+  
+  h3 {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'gary';
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #393D3F; /* Default button color */
+    border: none;
+    color: white;
+    transition: background-color 0.5s ease, border-radius 0.5s ease; /* Transition effect */
+    border-radius: 10px; /* Curving the button edges */
+    overflow: hidden; /* Hide the overflow from the background */
+    position: relative;
+    font-family: 'robo';
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #62929E 50%, #393D3F 50%); /* Lime green hover effect */
+    background-size: 200% 100%; /* Background size for transition */
+    transition: background-position 0.5s ease; /* Transition effect for gradient */
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #62929E; /* Starting color for animation */
+    transition: left 1s ease; /* Transition for left positioning */
+  }
+  
+  button:hover::before {
+    left: 100%; /* Move the starting point of the lime color to the right */
+  }
+  
+  .hexagons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hexagon {
+    position: relative;
+    width: 40px;
+    height: 40px; /* For proper proportion in a regular hexagon */
+    margin: 10px;
+    overflow: hidden;
+    background-color: #62929E; /* Set the background color */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: transform 0.3s ease-in-out; /* Transition effect on hover */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .hexagon img {
+    max-width: 78%; /* Ensure the image doesn't exceed the hexagon */
+    max-height: 78%; /* Ensure the image doesn't exceed the hexagon */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Adjust display */
+    margin: auto; /* Center the image inside the hexagon */
+  }
+  
+  .hexagon:hover {
+    transform: scale(1.3);
+  }
+
+  .giant-hexagon {
+    width: 350px; /* Adjust size as needed */
+    height: 446.4px; /* For proper proportion in a regular hexagon */
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden; /* Hides any image overflow */
+  }
+  
+  .giant-hexagon img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the entire hexagon */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .giant-hexagon:hover {
+    transform: scale(1.3);
+  }
+  

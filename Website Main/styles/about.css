@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .about-container {
+    display: flex;
+    height: 90vh;
+  }
+  
+  .left-section,
+  .right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .left-section img,
+  .right-section img {
+    height: 75vh; /* 75% of the viewport height */
+    border-radius: 20px; /* Rounded corners */
+    object-fit: cover;
+  }
+  
+  .middle-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .middle-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items in the center horizontally */
+    justify-content: center; /* Align items in the center vertically */
+    text-align: center; /* Center align the content */
+    height: 100%; /* Ensure content occupies the entire height */
+  }
+  
+  .middle-content h1 {
+    margin-bottom: 10px; /* Adjust spacing between the title and paragraph */
+  }
+  
+  .about-text {
+    max-width: 80%; /* Adjust the width as needed */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the animation to the elements */
+  .about-container,
+  .left-section,
+  .middle-section,
+  .right-section {
+    animation: fadeIn 2s ease forwards;
+  }
+  
+  /* Zoom effect for images */
+  .left-section img,
+  .right-section img {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Apply zoom effect on hover */
+  .left-section img:hover,
+  .right-section img:hover {
+    transform: scale(1.2);
+  }
+
+    /* Add border-radius and overflow properties to the video container */
+    .right-section {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px; /* Rounded corners */
+    }
+    
+    /* Video CSS */
+    .right-section video {
+      width: 90%; 
+      height: 100%; 
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); 
+      border-radius: 20px;
+      opacity: 0;
+    }
+
+    /* Added animation for image zoom */
+    .right-section .image-content {
+      transition: transform 0.5s ease-in-out;
+    }
+    
+    /* Apply zoom effect on hover */
+    .right-section:hover .image-content {
+      transform: scale(1.2);
+    }
