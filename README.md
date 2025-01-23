@@ -1,13 +1,12 @@
 # My Portfolio Website 🌐  
 
-## 📝 Table of Contents  
-- [Overview](#overview)  
-- [Features](#features)   
-- [License](#license)  
+## License
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
+A personal portfolio website showcasing my skills, projects, and experiences as a developer.
 
 ---
 
-## 📖 Overview  
+## 📖 Overview
 This repository contains the source code for my portfolio website. The website is designed to showcase my skills, highlight my projects, and provide visitors with an easy way to learn more about me and get in touch.
 
 ### Goals of the Website:  
@@ -24,12 +23,6 @@ This repository contains the source code for my portfolio website. The website i
 - **About Me Section**: A brief bio with a timeline of my career and skills.  
 - **Contact Form**: A functional form to send me messages directly.  
 - **Interactive Animations**: Subtle animations to enhance user experience.  
-
----
-
-## License
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
-A personal portfolio website showcasing my skills, projects, and experiences as a developer.
 
 ---
 
