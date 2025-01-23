@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Justin Ferreira</title>
-  <link rel="stylesheet" href="/Website Main/styles/styles.css">
-  <link rel="stylesheet" href="/Website Main/styles/project.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/project.css">
 </head>
 <body>
-    <div class="top-bar">
-        <div class="circle"><a href="/Website Main/index.html"><img src="/Website Main/pictures/Logo.png" alt=""></a></div>
-        <div class="nav-buttons">
-            <button onclick="window.location.href='experience.html'">Experience</button>
-            <button onclick="window.location.href='about.html'">About Me</button>
-            <button onclick="window.location.href='contact.html'">Contact</button>
-        </div>
-      </div>
+  <div class="top-bar">
+    <div class="circle"><a href="../index.html"><img src="../pictures/Logo.png" alt=""></a></div>
+    <div class="nav-buttons" id="navButtons">
+        <button onclick="window.location.href='experience.html'">Experience</button>
+        <button onclick="window.location.href='about.html'">About Me</button>
+        <button onclick="window.location.href='contact.html'">Contact</button>
+    </div>
+    <div class="burger-menu" id="burgerMenu" onclick="toggleMenu()">&#9776;</div>
+  </div>
+      
       <br/>
       <h1 style="text-align: center;"><span style="color: lime;">M</span>y <span style="color: lime;">P</span>rojects!</h1><br/>
       <div class="search-filter-section">
@@ -29,7 +32,7 @@
         <a href="https://github.com/JustorBot/Bestest-Shop-Manager-Promise" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
           <div class="project-image">
             <div class="content-to-change">
-              <img src="/Website Main/pictures/SHop.webp" alt="Shop" class="image-content">
+              <img src="../pictures/SHop.webp" alt="Shop" class="image-content">
             </div>
           </div>
           <div class="project-description">
@@ -37,54 +40,10 @@
             <p>A simple Terminal shop manager that calculates sales of different locations of stores u own. <br/>- Python</p>
           </div>
         </a>
-        <a href="https://github.com/JustorBot/Rock-Paper-Scissors" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
-          <div class="project-image">
-            <div class="content-to-change">
-              <img src="/Website Main/pictures/rps.png" alt="Rock-Paper_scissors" class="image-content">
-            </div>
-          </div>
-          <div class="project-description">
-            <h2 style="font-size: 25px;">Rock-Paper-Scissors</h2>
-            <p>A simple Rock-Paper-Scissors Game. <br/>- Python</p>
-          </div>
-        </a>
-        <a href="https://github.com/JustorBot/Aim-trainer-python" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
-          <div class="project-image">
-            <div class="content-to-change">
-              <img src="/Website Main/pictures/aim.png" alt="Aim Trainer" class="image-content">>
-            </div>
-          </div>
-          <div class="project-description">
-            <h2 style="font-size: 25px;">Aim Trainer</h2>
-            <p>A simple ain trainer to test your aim. <br/>- Python</p>
-          </div>
-        </a>
-        <a href="https://github.com/JustorBot/Very-Basic-Cookie-Clicker" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
-          <div class="project-image">
-            <div class="content-to-change">
-              <img src="/Website Main/pictures/cookie.png" alt="Cookie Clicker" class="image-content">
-            </div>
-          </div>
-          <div class="project-description">
-            <h2 style="font-size: 25px;">Cookie Clicker</h2>
-            <p>A simple cookie clicker type game. <br/>- Python</p>
-          </div>
-        </a>
-        <a href="https://justornator.itch.io/cuble" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
-          <div class="project-image">
-            <div class="content-to-change">
-              <img src="/Website Main/pictures/Cuble.png" alt="Cuble" class="image-content">
-            </div>
-          </div>
-          <div class="project-description">
-            <h2 style="font-size: 25px;">Cuble</h2>
-            <p>A simple Platformer Game<br/>- C#</p>
-          </div>
-        </a>
         <a href="https://github.com/cornielvorster/CTU-buddy" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
           <div class="project-image">
             <div class="content-to-change">
-              <img src="/Website Main/pictures/ctubuddy.png" alt="Ctu" class="image-content">
+              <img src="../pictures/ctubuddy.png" alt="Ctu" class="image-content">
             </div>
           </div>
           <div class="project-description">
@@ -92,19 +51,100 @@
             <p>A group project of a website. I made the contact and the shared resources<br/>- Html, css, Javascript</p>
           </div>
         </a>
-        <a href="https://github.com/JustorBot/Searcher" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
+        <a href="https://github.com/JustorBot/Portfolio-Website" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
           <div class="project-image">
             <div class="content-to-change">
-              <img src="/Website Main/pictures/search.png" alt="Search" class="image-content">
+              <img src="../pictures/Ai Detection.jpg" alt="Search" class="image-content">
             </div>
           </div>
           <div class="project-description">
-            <h2 style="font-size: 25px;">Google Searcher</h2>
-            <p>Simple terminal searcher that returns top result<br/>- Python</p>
+            <h2 style="font-size: 25px;">Ai Detection Model</h2>
+            <p>Ai Detection Model<br/>- Python</p>
+          </div>
+        </a>
+        <a href="https://github.com/JustorBot/Resturant-Thing" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
+          <div class="project-image">
+            <div class="content-to-change">
+              <img src="../pictures/restaurant.jpg" alt="Search" class="image-content">
+            </div>
+          </div>
+          <div class="project-description">
+            <h2 style="font-size: 25px;">Resturant</h2>
+            <p>Simple Resturant maker<br/>- Python</p>
+          </div>
+        </a>
+        <a href="https://github.com/JustorBot/Todo-List-website-" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
+          <div class="project-image">
+            <div class="content-to-change">
+              <img src="../pictures/todo.jpg" alt="Search" class="image-content">
+            </div>
+          </div>
+          <div class="project-description">
+            <h2 style="font-size: 25px;">Todo List</h2>
+            <p>ToDo list website<br/>- Html, css, JavaScript</p>
+          </div>
+        </a>
+        <a href="https://github.com/JustorBot/Mortgage-Calculator" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
+          <div class="project-image">
+            <div class="content-to-change">
+              <img src="../pictures/morgage.jpg" alt="Search" class="image-content">
+            </div>
+          </div>
+          <div class="project-description">
+            <h2 style="font-size: 25px;">Morgage Calculator</h2>
+            <p>A simple calculator using GUI and simple maths expresion to calculate loans<br/>- C#</p>
+          </div>
+        </a>
+        <a href="https://github.com/JustorBot/Console-Library-Application" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
+          <div class="project-image">
+            <div class="content-to-change">
+              <img src="../pictures/liabary.jpg" alt="Search" class="image-content">
+            </div>
+          </div>
+          <div class="project-description">
+            <h2 style="font-size: 25px;">Liabary Management</h2>
+            <p>A fully working console liabary management system<br/>- Java</p>
+          </div>
+        </a>
+        <a href="https://github.com/JustorBot/Zoo-Manager" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
+          <div class="project-image">
+            <div class="content-to-change">
+              <img src="../pictures/zoo.jpg" alt="Search" class="image-content">
+            </div>
+          </div>
+          <div class="project-description">
+            <h2 style="font-size: 25px;">Zoo Management</h2>
+            <p>A GUI based zoo manager<br/>- C#</p>
+          </div>
+        </a>
+        <a href="https://github.com/JustorBot/Task-Manager-Type-App" class="project-block" onmouseover="changeToVideo(this)" onmouseout="changeToImage(this)">
+          <div class="project-image">
+            <div class="content-to-change">
+              <img src="../pictures/task.jpg" alt="Search" class="image-content">
+            </div>
+          </div>
+          <div class="project-description">
+            <h2 style="font-size: 25px;">Task Management</h2>
+            <p>A task manager application using sqlite<br/>- Java</p>
           </div>
         </a>
       </div>
 
-      <script src="/Website Main/scripts/project.js"></script>
+      <script src="../scripts/project.js"></script> 
+      <script>
+        function toggleMenu() {
+          var navButtons = document.getElementById("navButtons");
+          if (navButtons.style.display === "flex") {
+            navButtons.style.display = "none";
+          } else {
+            navButtons.style.display = "flex";
+          }
+        }
+  
+        // Ensure nav menu is closed on page load
+        window.onload = function() {
+          document.getElementById("navButtons").style.display = "none";
+        };
+      </script>   
 </body>
 </html>
